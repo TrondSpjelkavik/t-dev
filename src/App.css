@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: #651e3e;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.leaf-svg {
+  height: 40px;
+  width: 40px;
+  z-index: 99;
+}
+
+g {
+  z-index: 99;
+}
+
+.icons {
+  height: 50px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.icons-feather {
+  height: 70px;
+}
+
+.noroff-icon-text {
+  position: relative;
+  right: 12px;
+}
+
+.tech-icon-text {
+  position: relative;
+  right: 6px;
+}
+
+.trond {
+  height: 250px;
+}
+
+.arrow-icon {
   color: white;
+  height: 30px;
+  width: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.social-icons {
+  color: white;
+  height: 30px;
+  width: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  list-style: none;
+
+  align-items: center;
+  z-index: 99;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline #db6400;
+}
+
+.github-icon {
+  height: 35px;
+  width: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+.github-icon:hover {
+  color: #db6400;
 }
