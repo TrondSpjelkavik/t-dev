@@ -1,12 +1,33 @@
 import React from 'react'
 
+
 import { FaGithub } from "react-icons/fa"
+import Workoutimg from "../../media/img/workout-app.gif"
 
 import { ProjectInfoContainer, ProjectInfoHeadline, ProjectInfoButton, ProjectInfoButtonContainer, ProjectInfoParagraph, ProjectImage } from "./SpaceX"
 
-import Workoutimg from "../../media/img/workout-native.png"
+
+
+import styled from "styled-components"
+
+const GIFcontainer = styled.div`
+position: absolute;
+right: 100px;
+top: 0;
+`
+
+
 
 function ReactProject() {
+
+    function toWorkoutApp() {
+        window.open("https://expo.io/@trondspjelkavik/projects/easy-workout")
+    }
+
+    function toWorkoutAppGithub() {
+        window.open("https://github.com/TrondSpjelkavik/workout-app-native")
+    }
+
     return (
         <ProjectInfoContainer>
         <ProjectInfoHeadline>React Native APP</ProjectInfoHeadline>
@@ -17,10 +38,12 @@ function ReactProject() {
              Ut maximus libero enim. Integer sed arcu ut felis feugiat condimentum eget sed enim. Ut tempor maximus gravida.
             </ProjectInfoParagraph>
             <ProjectInfoButtonContainer>
-            <ProjectInfoButton>View Site</ProjectInfoButton>
-            <FaGithub className="github-icon"></FaGithub>
+            <ProjectInfoButton onClick={toWorkoutApp}>View Site</ProjectInfoButton>
+            <FaGithub className="github-icon" onClick={toWorkoutAppGithub}></FaGithub>
             </ProjectInfoButtonContainer>
+            <GIFcontainer>
             <ProjectImage src={Workoutimg}></ProjectImage>
+            </GIFcontainer>
     </ProjectInfoContainer>
     )
 }

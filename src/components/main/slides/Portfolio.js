@@ -2,7 +2,7 @@ import React from 'react'
 
 import { FaGithub } from "react-icons/fa"
 
-import { ProjectInfoContainer, ProjectInfoHeadline, ProjectInfoButton, ProjectInfoButtonContainer, ProjectInfoParagraph, ProjectImage } from "./SpaceX"
+import { ProjectInfoContainer, ProjectInfoHeadline, ProjectInfoButtonContainer, ProjectInfoParagraph, ProjectImage } from "./SpaceX"
 
 import Portfolioimg from "../../media/img/portfolio-img.png"
 
@@ -17,7 +17,6 @@ function Portfolio() {
              Ut maximus libero enim. Integer sed arcu ut felis feugiat condimentum eget sed enim. Ut tempor maximus gravida.
             </ProjectInfoParagraph>
             <ProjectInfoButtonContainer>
-            <ProjectInfoButton>View Site</ProjectInfoButton>
             <FaGithub className="github-icon"></FaGithub>
             </ProjectInfoButtonContainer>
             <ProjectImage src={Portfolioimg}></ProjectImage>

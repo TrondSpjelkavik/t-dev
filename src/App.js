@@ -7,13 +7,16 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
 
 
 import Home from "./components/main/Home"
 import Projects from './components/main/Projects';
 import Contact from "./components/main/Contact"
+
+
+
 
 const NavContainer = styled.nav`
 position: absolute;
@@ -93,12 +96,22 @@ function App() {
         <HamburgerLines></HamburgerLines>
     </Hamburger>
 <NavContainer>
-    <NavList><Link  to="/">Home</Link></NavList>
-    <NavList>  <Link to="/projects">Projects</Link></NavList>
-    <NavList onClick={toAboutMe}> <Link to="/about">About me</Link></NavList>
-    <NavList> <Link to="/contact">Contact</Link></NavList>
+    <NavList><NavLink to="/">Home</NavLink></NavList>
+    <NavList>  <NavLink to="/projects" activeStyle={{
+              textDecoration: "underline #db6400",
+              textDecorationThickness: "3px"}}>Projects</NavLink></NavList>
+    <NavList onClick={toAboutMe}> <NavLink to="/about" activeStyle={{
+              textDecoration: "underline #db6400",
+              textDecorationThickness: "3px"}}>About me</NavLink></NavList>
+    <NavList> <NavLink to="/contact" activeStyle={{
+              textDecoration: "underline #db6400",
+              textDecorationThickness: "3px"}}>Contact</NavLink></NavList>
 </NavContainer>
+
 <Switch>
+<Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/projects">
             <Projects />
           </Route>
@@ -108,11 +121,11 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+         
         </Switch>
+        
 </div>
+
 </Router>
 
     )

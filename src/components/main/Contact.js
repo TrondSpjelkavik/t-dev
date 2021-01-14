@@ -52,7 +52,7 @@ position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 400px;
+  height: 450px;
   max-width: 500px;
   top: 100px;
   margin-left: 50px;
@@ -85,6 +85,7 @@ border: 1px solid white;
 background: transparent;
 &::placeholder {
     padding: 5px 0 0 5px;
+    font-size: 16px;
 }
 `
 

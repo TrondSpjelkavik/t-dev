@@ -7,10 +7,12 @@ import { OrangeLine } from "./About"
 import ProjectsNav from "./extra/ProjectsNav"
 
 
+
+
 export const PageContainer = styled.div`
 display: flex;
 justify-content: center;
-
+position: relative;
 `
 
 
@@ -38,14 +40,19 @@ width: 100%;
 
 function Projects() {
     return (
-      <PageContainer>
+            <div>
+              <PageContainer>
           <PageHeadline>Projects<OrangeLine></OrangeLine></PageHeadline>
           <ProjectsContainer>
               <ProjectsNav></ProjectsNav>
               
         </ProjectsContainer>
-        
+     
         </PageContainer>
+       
+        </div>
+ 
+    
     )
 }
 

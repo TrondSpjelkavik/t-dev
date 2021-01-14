@@ -54,9 +54,18 @@ position: absolute;
 top: 120px;
 right: 10px;
 height: 300px;
+
 `
 
 function SpaceX() {
+
+    function toSpacex() {
+        window.open("https://t-dev.no/spacex-microsite/")
+    }
+
+    function toSpacexGithub() {
+        window.open("https://github.com/TrondSpjelkavik/project-exam-1")
+    }
 
     return (
         <ProjectInfoContainer>
@@ -68,8 +77,8 @@ function SpaceX() {
                  Ut maximus libero enim. Integer sed arcu ut felis feugiat condimentum eget sed enim. Ut tempor maximus gravida.
                 </ProjectInfoParagraph>
                 <ProjectInfoButtonContainer>
-                <ProjectInfoButton>View Site</ProjectInfoButton>
-                <FaGithub className="github-icon"></FaGithub>
+                <ProjectInfoButton onClick={toSpacex}>View Site</ProjectInfoButton>
+                <FaGithub className="github-icon" onClick={toSpacexGithub}></FaGithub>
                 </ProjectInfoButtonContainer>
                 <ProjectImage src={SpaceXimg}></ProjectImage>
         </ProjectInfoContainer>

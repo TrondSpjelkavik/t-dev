@@ -9,7 +9,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    NavLink
   } from "react-router-dom";
 
 import ReactProject from '../slides/ReactProject';
@@ -50,16 +50,27 @@ function ProjectsNav() {
     return (
   <Router>
         <ProjectsNavigation>
-            <ProjectsNavigationList><Link to="/projects">SpaceX</Link></ProjectsNavigationList>
-            <ProjectsNavigationList><Link to="/projects:react">React</Link></ProjectsNavigationList>
-            <ProjectsNavigationList><Link to="/portfolio">Portfolio</Link></ProjectsNavigationList>
+            <ProjectsNavigationList><NavLink to="/projects"  activeStyle={{
+    textDecoration: "underline #db6400",
+    textDecorationThickness: "3px"
+  }}>SpaceX</NavLink></ProjectsNavigationList>
+            <ProjectsNavigationList><NavLink to="/react"
+            activeStyle={{
+                textDecoration: "underline #db6400",
+                textDecorationThickness: "3px"
+              }} >React</NavLink></ProjectsNavigationList>
+            <ProjectsNavigationList><NavLink to="/portfolio" 
+            activeStyle={{
+                textDecoration: "underline #db6400",
+                textDecorationThickness: "3px"
+              }}>Portfolio</NavLink></ProjectsNavigationList>
       
         </ProjectsNavigation>
         <Switch>
           <Route path="/projects">
             <SpaceX></SpaceX>
           </Route>
-          <Route path="/projects:react">
+          <Route path="/react">
             <ReactProject></ReactProject>
           </Route>
           <Route path="/portfolio">

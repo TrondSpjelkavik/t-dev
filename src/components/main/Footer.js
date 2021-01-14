@@ -75,19 +75,31 @@ function Footer() {
           });
     }
 
+    function toGithub() { 
+        window.open('https://github.com/TrondSpjelkavik');
+    }
+
+    function toLinkedin() { 
+        window.open('https://www.linkedin.com/in/trond-fuglseth-spjelkavik-80871552/');
+    }
+
+    function toFacebook() { 
+        window.open('https://www.linkedin.com/in/trond-fuglseth-spjelkavik-80871552/');
+    }
+
     return (
         <FooterContainer>
             <ToTheTop onClick={toTheTopButton}>
                 <GoArrowUp className="arrow-icon"></GoArrowUp>
             </ToTheTop>
         <SocialIconsContainer>
-        <SocialIcons>
+        <SocialIcons onClick={toGithub}>
             <FaGithub className="social-icons"></FaGithub>
         </SocialIcons>
-        <SocialIcons>
+        <SocialIcons onClick={toLinkedin}>
             <FaLinkedinIn className="social-icons"></FaLinkedinIn>
         </SocialIcons>
-        <SocialIcons><FaFacebookF className="social-icons"></FaFacebookF></SocialIcons>
+        <SocialIcons onClick={toFacebook}><FaFacebookF className="social-icons"></FaFacebookF></SocialIcons>
         </SocialIconsContainer>
         <CopyrightText>Trond Fuglseth Spjelkavik © 2021</CopyrightText>
         </FooterContainer>
