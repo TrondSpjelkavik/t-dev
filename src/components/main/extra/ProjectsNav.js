@@ -27,7 +27,14 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 0 30px 0 30px;
-font-family: 'Inconsolata', monospace;
+z-index: 4;
+font-size: 16px;
+font-family: 'Roboto', sans-serif;
+@media (max-width: 800px) {
+  width: 100%;
+  justify-content: space-around;
+  padding: 0;
+}
 `
 const ProjectsNavigationList = styled.li`
 align-items: center;
@@ -37,7 +44,7 @@ color: white;
 cursor: pointer;
 &:hover {
     text-decoration: underline #DB6400;
-    text-decoration-thickness: 2.5px;
+    text-decoration-thickness: 2px;
 }
 `
 
@@ -51,9 +58,9 @@ function ProjectsNav() {
   <Router>
         <ProjectsNavigation>
             <ProjectsNavigationList><NavLink to="/projects"  activeStyle={{
-    textDecoration: "underline #db6400",
-    textDecorationThickness: "3px"
-  }}>SpaceX</NavLink></ProjectsNavigationList>
+              textDecoration: "underline #db6400",
+              textDecorationThickness: "3px"}}
+    >SpaceX</NavLink></ProjectsNavigationList>
             <ProjectsNavigationList><NavLink to="/react"
             activeStyle={{
                 textDecoration: "underline #db6400",

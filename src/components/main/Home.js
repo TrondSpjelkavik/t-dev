@@ -1,5 +1,5 @@
 import React from 'react'
-import Animation from "../media/Animation"
+import Animation from "./Animation"
 import About from "./About"
 import Footer from "./Footer"
 

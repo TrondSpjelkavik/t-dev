@@ -17,7 +17,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 0 20px 0 30px;
-font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;
 @media (max-width: 700px) {
     position: absolute;
     right: 800px;
@@ -50,7 +50,7 @@ top: 20px;
 z-index: 99;
 display: none;
 @media (max-width: 700px) {
-
+    z-index: 99;
 display: flex;
 }
 `
@@ -60,13 +60,20 @@ position: relative;
 width: 45px;
 height: 3px;
 background: white;
+z-index: 99;
 `
 
+
+
+
 function Nav() {
+
+
+   
     return (
         
         <div>
-            <Hamburger>
+            <Hamburger onClick={handleClick}>
                 <HamburgerLines></HamburgerLines>
                 <HamburgerLines></HamburgerLines>
                 <HamburgerLines></HamburgerLines>

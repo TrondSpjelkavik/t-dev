@@ -22,6 +22,10 @@ g {
   z-index: 99;
 }
 
+.list-items {
+  padding: 5px 0 5px 0;
+}
+
 .icons {
   height: 50px;
   align-items: center;
@@ -60,9 +64,8 @@ g {
 a {
   text-decoration: none;
   color: white;
-  font-size: 20px;
   list-style: none;
-
+  font-family: "Roboto", sans-serif;
   align-items: center;
   z-index: 99;
   cursor: pointer;
@@ -81,4 +84,31 @@ a:hover {
 
 .github-icon:hover {
   color: #db6400;
+}
+
+.hamburger-display {
+  display: flex !important;
+}
+
+.close-icon {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  color: #db6400;
+}
+
+@media (max-width: 700px) {
+  .trond {
+    width: 250px;
+    margin: 0 auto;
+  }
+  .icons {
+    height: 40px;
+  }
+  .icons-feather {
+    height: 60px;
+  }
 }

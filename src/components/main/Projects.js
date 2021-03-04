@@ -20,10 +20,24 @@ export const ProjectsContainer = styled.div`
 position: absolute;
 top: 300px;
 width: 100%;
-height: 550px;
+height: 500px;
 background: #051E3E;
 max-width: 800px;
+@media (max-width: 800px) {
+    align-items: center;
+  }
 
+  @media (max-width: 414px) and (max-height: 667px) {
+    top: 100px !important;
+  }
+  @media (max-height: 859px) {
+    
+    top: 250px;
+  }
+  @media (max-height: 760px) {
+    
+    top: 200px;
+  }
 
 
 `
@@ -35,6 +49,15 @@ position: absolute;
 top: 180px;
 font-family: 'Inconsolata', monospace;
 width: 100%;
+
+@media (max-width: 414px) and (max-height: 667px) {
+  top: 25px !important;
+}
+
+@media (max-height: 760px) {
+    
+  top: 125px;
+}
 `
 
 

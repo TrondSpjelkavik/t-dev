@@ -28,11 +28,10 @@ background: #051E3E;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 0 20px 0 30px;
+padding: 0 40px 0 40px;
 font-family: 'Lato', sans-serif;
 @media (max-width: 700px) {
-    position: absolute;
-    right: 800px;
+    display: none;
 }
 `;
 
@@ -51,7 +50,7 @@ cursor: pointer;
 `
 
 const Hamburger = styled.div`
-position: absolute;
+position: fixed;
 align-items: center;
 flex-direction: column;
 justify-content: space-around;
@@ -59,11 +58,10 @@ height: 40px;
 width: 60px;
 right: 20px;
 top: 20px;
-
+cursor: pointer;
 z-index: 99;
 display: none;
 @media (max-width: 700px) {
-
 display: flex;
 }
 `
@@ -77,33 +75,67 @@ background: white;
 
 
 function App() {
-
+ 
  
   function toAboutMe() {
     setTimeout(() => { window.scrollTo({
-      top : 900,
+      top : 800,
       behavior: "smooth",
     }); }, 500);
     
   }
 
+ 
+
+  function openHamburger() {
+
+
+    const test = document.querySelector(".test")
+
+    const mq = window.matchMedia( "(max-width: 700px)" );
+if (mq.matches) {
+  test.classList.toggle("hamburger-display")
+  test.style.flexDirection = "column";
+  test.style.justifyContent = "space-around";
+  test.style.height = "100%";
+  test.style.width = "100%";
+  test.style.zIndex = "98";
+  test.style.position = "fixed";
+  test.style.padding = "0";
+  test.style.top = "0";
+  
+} 
+
+
+
+  }
+
+  function closeHamburger() {
+    const test = document.querySelector(".test")
+    const mq = window.matchMedia( "(max-width: 700px)" );
+    if (mq.matches) {
+      test.classList.toggle("hamburger-display")
+    }
+   
+  }
+
   return (
     <Router>
     <div>
-    <Hamburger>
+    <Hamburger onClick={openHamburger}>
         <HamburgerLines></HamburgerLines>
         <HamburgerLines></HamburgerLines>
         <HamburgerLines></HamburgerLines>
     </Hamburger>
-<NavContainer>
-    <NavList><NavLink to="/">Home</NavLink></NavList>
-    <NavList>  <NavLink to="/projects" activeStyle={{
+<NavContainer className="test">
+    <NavList><NavLink to="/" onClick={closeHamburger}>Home</NavLink></NavList>
+    <NavList>  <NavLink to="/projects" onClick={closeHamburger} activeStyle={{
               textDecoration: "underline #db6400",
               textDecorationThickness: "3px"}}>Projects</NavLink></NavList>
-    <NavList onClick={toAboutMe}> <NavLink to="/about" activeStyle={{
+    <NavList onClick={toAboutMe}> <NavLink to="/about" onClick={closeHamburger} activeStyle={{
               textDecoration: "underline #db6400",
               textDecorationThickness: "3px"}}>About me</NavLink></NavList>
-    <NavList> <NavLink to="/contact" activeStyle={{
+    <NavList> <NavLink to="/contact" onClick={closeHamburger} activeStyle={{
               textDecoration: "underline #db6400",
               textDecorationThickness: "3px"}}>Contact</NavLink></NavList>
 </NavContainer>

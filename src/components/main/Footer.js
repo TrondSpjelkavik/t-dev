@@ -11,6 +11,10 @@ background: #051E3E;
 font-family: 'Inconsolata', monospace;
 position: relative;
 justify-content: center;
+@media (max-height: 700px) {
+    
+    margin-top: 20px;
+  }
 `
 
 const ToTheTop = styled.button`
@@ -31,7 +35,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 `
 
-const SocialIconsContainer = styled.div`
+export const SocialIconsContainer = styled.div`
 display: flex;
 max-width: 300px;
 justify-content: space-around;
@@ -40,7 +44,7 @@ align-item: center;
 
 `
 
-const SocialIcons = styled.div`
+export const SocialIcons = styled.div`
 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 height: 65px;
 width: 55px;
@@ -62,7 +66,8 @@ font-size: 14px;
 position: absolute;
 bottom: 10px;
 left: 50%;
-transform: translateX(-50%)
+transform: translateX(-50%);
+white-space: nowrap;
 `
 
 
@@ -84,7 +89,7 @@ function Footer() {
     }
 
     function toFacebook() { 
-        window.open('https://www.linkedin.com/in/trond-fuglseth-spjelkavik-80871552/');
+        window.open('https://www.facebook.com/Trondchivu');
     }
 
     return (

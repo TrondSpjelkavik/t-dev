@@ -26,13 +26,10 @@ white-space: nowrap;
 @media (max-width: 700px) {
   font-size: 26px;
 }
+
 @media (max-width: 566px) {
-  font-size: 24px;
-  top: 310px;
-}
-@media (max-width: 414px) {
-  font-size: 18px;
-  top: 150px;
+  font-size: 22px;
+  top: 120px;
 }
 
 `
@@ -48,13 +45,10 @@ white-space: nowrap;
 @media (max-width: 700px) {
   font-size: 20px;
 }
+
 @media (max-width: 566px) {
-  font-size: 18px;
-  top: 350px;
-}
-@media (max-width: 414px) {
   font-size: 16px;
-  top: 190px;
+  top: 180px;
 }
 
 `
@@ -67,7 +61,15 @@ transform: translateX(-50%);
 height: 100%;
 width: 100%;
 min-height: 100vh;
-font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;
+@media (max-height: 859px) {
+    
+  top: 50px;
+}
+@media (max-height: 712px) {
+    
+  top: 0px;
+}
 `
 
 const FrontPageButton = styled.button`
@@ -85,14 +87,12 @@ cursor: pointer;
  &:hover {
   background: rgba(219,100,0, 0.9);
  }
- font-family: 'Lato', sans-serif;
- @media (max-width: 566px) {
+ font-family: 'Roboto', sans-serif;
+
+@media (max-width: 566px) {
   font-size: 16px;
-  top: 390px;
-}
-@media (max-width: 414px) {
-  font-size: 16  px;
   top: 230px;
+  z-index: 99;
 }
  
 `
@@ -127,10 +127,10 @@ visibility: hidden;
 @media (max-width: 566px) {
   visibility: visible;
 }
-@media (max-width: 320px) {
-  height: 500px;
-}
+
 `
+
+
 
 
 
@@ -159,8 +159,6 @@ function Animation() {
 <MainHeadline>Trond Fuglseth Spjelkavik</MainHeadline>
 <SubHeadline>Front-End Developer student</SubHeadline>
 <FrontPageButton onClick={toProjects}>View my work</FrontPageButton>
-
-
 </FrontPageContainer>
 
 

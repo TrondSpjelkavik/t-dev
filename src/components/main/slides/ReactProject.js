@@ -2,9 +2,9 @@ import React from 'react'
 
 
 import { FaGithub } from "react-icons/fa"
-import Workoutimg from "../../media/img/workout-app.gif"
+import Workoutimg from "../../../img/workout-app.gif"
 
-import { ProjectInfoContainer, ProjectInfoHeadline, ProjectInfoButton, ProjectInfoButtonContainer, ProjectInfoParagraph, ProjectImage } from "./SpaceX"
+import { ProjectInfoContainer, ProjectInfoHeadline, ProjectInfoButton, ProjectInfoParagraph, ProjectImage } from "./SpaceX"
 
 
 
@@ -14,6 +14,14 @@ const GIFcontainer = styled.div`
 position: absolute;
 right: 100px;
 top: 0;
+`
+
+export const ReactInfoButtonContainer = styled.div`
+display: flex;
+justify-content: space-between;
+width: 200px;
+align-items: center;
+
 `
 
 
@@ -30,17 +38,17 @@ function ReactProject() {
 
     return (
         <ProjectInfoContainer>
-        <ProjectInfoHeadline>React Native APP</ProjectInfoHeadline>
-        <ProjectInfoParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec aliquam ante. Quisque in mollis diam, et mollis sapien. Aenean sit 
-            amet ultricies mi, a sodales metus. Aliquam eu iaculis ex. Proin condimentum lacus nibh, eu dictum mauris tempor id.</ProjectInfoParagraph>
+        <ProjectInfoHeadline>React Native app</ProjectInfoHeadline>
+        <ProjectInfoParagraph>I wanted to learn more about React Native, and created a workout App called Easy Workout.</ProjectInfoParagraph>
             <ProjectInfoParagraph>
-            In eros nunc, placerat luctus sem eu, sodales porttitor justo. Integer a maximus quam, a maximus massa. Integer id nibh dolor.
-             Ut maximus libero enim. Integer sed arcu ut felis feugiat condimentum eget sed enim. Ut tempor maximus gravida.
+            The project is made with <a href="https://expo.io">expo</a> and React Native. For navigation i used @react-navigation, and images are from <a href="https://thenounproject.com/AliceNoir/collection/fitness-exercises/">Noun Project</a>.
+            The app is under development, and this is a learning experience for me. Click view in expo under and download expo app to view the app.
+
             </ProjectInfoParagraph>
-            <ProjectInfoButtonContainer>
-            <ProjectInfoButton onClick={toWorkoutApp}>View Site</ProjectInfoButton>
+            <ReactInfoButtonContainer>
+            <ProjectInfoButton onClick={toWorkoutApp}>View in Expo</ProjectInfoButton>
             <FaGithub className="github-icon" onClick={toWorkoutAppGithub}></FaGithub>
-            </ProjectInfoButtonContainer>
+            </ReactInfoButtonContainer>
             <GIFcontainer>
             <ProjectImage src={Workoutimg}></ProjectImage>
             </GIFcontainer>
