@@ -74,6 +74,17 @@ align-items: center;
 
 `
 
+const ChartHeadline = styled.h1 `
+align-items: center;
+text-align: center;
+font-size: 28px;
+color: white;
+font-weight: 400;
+margin-bottom: 20px;
+font-family: 'Roboto', sans-serif;
+
+`
+
 
 function Chart() {
 
@@ -94,6 +105,7 @@ function Chart() {
         return (
         
             <ChartContainer>
+                <ChartHeadline>Experience</ChartHeadline>
          <ChartLines>
              <ChartExperience style={{width: learningExp[0].percentage - 10 + "%"}}>
              <div>{learningExp[0].tech}</div> <ExperiencePercentage>{learningExp[0].percentage} %</ExperiencePercentage> <ChartBorder></ChartBorder> 

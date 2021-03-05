@@ -89,7 +89,7 @@ margin-top: 20px;
 const AboutMeContainer = styled.div`
 display: flex;
 justify-content: space-around;
-max-width: 800px;
+max-width: 1000px;
 margin: 0 auto;
 padding-top: 100px;
 @media (max-width: 700px) {
@@ -104,7 +104,7 @@ display: flex;
 flex-direction: column;
 margin-left: 20px;
 @media (max-width: 700px) {
-    height: 500px;
+    height: 700px;
     margin-top: 50px;
   }
 
@@ -113,21 +113,23 @@ margin-left: 20px;
 
 const AboutMeHeadline = styled.h2`
 font-size: 30px;
+text-align: start;
+margin-left: 160px;
 color: white;
 font-family: 'Roboto', sans-serif;
 font-weight: 400;
 @media (max-width: 700px) {
-    text-align: center;
-  
-  }
+  text-align: center;
+  margin: 0 auto;
+}
 
 `
 
 const AboutMeParagraph = styled.p`
 font-size: 18px;
 color: white;
-margin-bottom: 30px;
-max-width: 500px;
+margin-bottom: 10px;
+max-width: 800px;
 
 `
 
@@ -138,10 +140,13 @@ background: #DB6400;
 margin-bottom: 30px;
 margin-left: 30px;
 margin-top: 3px;
+margin-left: 190px;
+margin-bottom: 50px;
 @media (max-width: 700px) {
-    margin: 0 auto;
-    margin-bottom: 50px;
-  }
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
 
 `
 
@@ -188,11 +193,19 @@ function About() {
                     School of technology and digital media.
                     </AboutMeParagraph>
                     <AboutMeParagraph>
-                        With long and broad experience in sales and teamwork, 
-                        I have a high work capacity and solving the customer's needs in a good and efficient way.
-                         I am a problem solver who enjoys working both independently and with others.
-
-                    </AboutMeParagraph>
+  
+                         I want to make a better web. One that is fast, easy to use, accessible to all and error-free.
+                         I started my journey to become a developer in october 2019, and after 14 years in sales I have found
+                         my passion. Learning new technologies and creating new projects are features I love in
+                         this profession. 
+                         </AboutMeParagraph>
+                         <AboutMeParagraph>
+                         I am currently learning <a href="www.golang.org">Go - golang</a> along with my studies.
+                         I believe Go will become a very important language in the future. 
+                         </AboutMeParagraph>
+                         <AboutMeParagraph>
+                         My goal is to be a Full-Stack Developer, because I like to know and understand  what drives an application. 
+                         </AboutMeParagraph>
                 </AboutMeText>
             </AboutMeContainer>
          
