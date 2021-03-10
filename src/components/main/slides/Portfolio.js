@@ -1,43 +1,55 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
-import { FaGithub } from "react-icons/fa"
-import { MdColorLens } from "react-icons/md"
-import { ImFontSize } from "react-icons/im"
+import { FaGithub } from "react-icons/fa";
 
-import { ProjectInfoContainer, ProjectInfoHeadline, ProjectInfoButtonContainer, ProjectInfoParagraph, ProjectImage } from "./SpaceX"
+import {
+  ProjectInfoContainer,
+  ProjectInfoHeadline,
+  ProjectInfoButtonContainer,
+  ProjectInfoParagraph,
+} from "./SpaceX";
 
-import Portfolioimg from "../../../img/portfolio-img.png"
+import Portfolioimg from "../../../img/Go-Logo_Blue.svg";
 
-
+const GoImage = styled.img`
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  height: 300px;
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
 
 function Portfolio() {
+  function toPortfolioGithub() {
+    window.open("https://github.com/TrondSpjelkavik/minor-go-projects");
+  }
 
-    function toPortfolioGithub() {
-        window.open("https://github.com/TrondSpjelkavik/portfolio-final")
-    }
-
-    return (
-        <ProjectInfoContainer>
-        <ProjectInfoHeadline>Portfolio</ProjectInfoHeadline>
-            <ProjectInfoParagraph>
-            I made this portfolio with React, and used styled components for styling. The colors:
-           
-            <li className="list-items">Pink <MdColorLens></MdColorLens> #651E3E</li>
-            <li className="list-items">Cyan-blue <MdColorLens></MdColorLens> #051E3E</li>
-            <li className="list-items">Orange <MdColorLens></MdColorLens> #DB6400</li>
-           
-            Fonts used is:
-          
-            <li className="list-items">Inconsolata <ImFontSize></ImFontSize> <a href="https://fonts.google.com/specimen/Inconsolata">Google Font</a></li>
-            <li className="list-items">Roboto <ImFontSize></ImFontSize> <a href="https://fonts.google.com/specimen/Roboto">Google Font</a></li>
-           
-            </ProjectInfoParagraph>
-            <ProjectInfoButtonContainer>
-            <FaGithub className="github-icon" onClick={toPortfolioGithub}></FaGithub>
-            </ProjectInfoButtonContainer>
-            <ProjectImage src={Portfolioimg}></ProjectImage>
+  return (
+    <ProjectInfoContainer>
+      <ProjectInfoHeadline>Go projects</ProjectInfoHeadline>
+      <ProjectInfoParagraph>
+        I wanted to learn more about Go and bought the book{" "}
+        <a href="http://www.gopl.io/"> Go programming language</a> by Alan
+        Donovan and Brian Kernighan.
+      </ProjectInfoParagraph>
+      <ProjectInfoParagraph>
+        The Go language is advanced and reliable, offering great built-in ways
+        to handle error. It is efficient, compiling down to on binary. Go
+        enhances the availability and reliability of services and increases code
+        readability through it simplicity.
+      </ProjectInfoParagraph>
+      <ProjectInfoButtonContainer>
+        <FaGithub
+          className="github-icon"
+          onClick={toPortfolioGithub}
+        ></FaGithub>
+      </ProjectInfoButtonContainer>
+      <GoImage src={Portfolioimg}></GoImage>
     </ProjectInfoContainer>
-    )
+  );
 }
 
-export default Portfolio
+export default Portfolio;
